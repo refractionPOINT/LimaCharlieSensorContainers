@@ -5,7 +5,7 @@
 # like "/rootfs".
 # Example:
 # export ENV HOST_FS=/rootfs
-# docker run --privileged --net=host -v /:/rootfs:ro your-lc-container-name
+# docker run --privileged --net=host -v /:/rootfs:ro --env HOST_FS=/rootfs --env LC_INSTALLATION_KEY=your_key refractionpoint/limacharlie_sensor
 
 FROM alpine
 
