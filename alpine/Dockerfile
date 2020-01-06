@@ -3,9 +3,12 @@
 # Requires a HOST_FS environment variable that specifies where
 # the host's root filesystem is mounted within the container
 # like "/rootfs".
+# Requires a NET_NS environment variable that specific where
+# the host's namespaces directory is mounted within the container
+# like "/netns".
 # Example:
 # export ENV HOST_FS=/rootfs
-# docker run --privileged --net=host -v /:/rootfs:ro --env HOST_FS=/rootfs --env LC_INSTALLATION_KEY=your_key refractionpoint/limacharlie_sensor
+# docker run --privileged --net=host -v /:/rootfs:ro --env HOST_FS=/rootfs --env NET_NS=/netns --env LC_INSTALLATION_KEY=your_key refractionpoint/limacharlie_sensor
 
 FROM alpine
 
