@@ -25,7 +25,7 @@ On a host of your cluster (although you can still run the sensor on a normal Doc
 the container like this (replacing `<<<your_key>>>` with the installation key value):
 
 ```
-docker run --privileged --net=host -v /:/rootfs:ro --env HOST_FS=/rootfs --env LC_INSTALLATION_KEY=<<<your_key>>> refractionpoint/limacharlie_sensor
+docker run --privileged --net=host -v /:/rootfs:ro -v /var/run/docker/netns:/netns:ro --env HOST_FS=/rootfs --env NET_NS=/netns --env LC_INSTALLATION_KEY=<<<your_key>>> refractionpoint/limacharlie_sensor
 ```
 
 That's it! You should see your sensor pop-up in your LimaCharlie Organization.
