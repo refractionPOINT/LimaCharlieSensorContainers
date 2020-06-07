@@ -12,6 +12,8 @@
 
 FROM alpine
 
+RUN apk add ca-certificates
+
 RUN mkdir lc
 WORKDIR /lc
 
