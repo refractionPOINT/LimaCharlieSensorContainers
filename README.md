@@ -41,11 +41,11 @@ That's it! You should see your sensor pop-up in your LimaCharlie Organization.
 Just create the container and point packets to it. The following environment variables
 can be used to customize the behavior:
 
-`OID`: LimaCharlie Organization ID
-`TOKEN`: LimaCharlie Ingestion Token
-`TAP_NAME`: (optional, default lc_tap) Name to identity as a source of the pcap
-`RETENTION`:(optional, default 7) Number of days to retain the pcap in LimaCharlie
-`INTERFACE`: Name of the network interface to capture from
+* `OID`: LimaCharlie Organization ID
+* `TOKEN`: LimaCharlie Ingestion Token
+* `TAP_NAME`: (optional, default lc_tap) Name to identity as a source of the pcap
+* `RETENTION`:(optional, default 7) Number of days to retain the pcap in LimaCharlie
+* `INTERFACE`: Name of the network interface to capture from
 
 ## Advanced
 
