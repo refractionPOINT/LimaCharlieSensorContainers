@@ -5,13 +5,19 @@ steps:
     secretEnv: ['USERNAME', 'PASSWORD']
   - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
-    args: ['-c', 'docker build -f ./centos/Dockerfile -t refractionpoint/limacharlie_sensor:latest refractionpoint/limacharlie_sensor:centos .']
+    args: ['-c', 'docker build -f ./centos/Dockerfile -t refractionpoint/limacharlie_sensor:latest -t refractionpoint/limacharlie_sensor:centos .']
   - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args: ['-c', 'docker build -f ./alpine/Dockerfile -t refractionpoint/limacharlie_sensor:alpine .']
   - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
-    args: ['-c', 'docker push refractionpoint/limacharlie_sensor:latest refractionpoint/limacharlie_sensor:centos refractionpoint/limacharlie_sensor:alpine']
+    args: ['-c', 'docker push refractionpoint/limacharlie_sensor:latest']
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args: ['-c', 'docker push refractionpoint/limacharlie_sensor:centos']
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args: ['-c', 'docker push refractionpoint/limacharlie_sensor:alpine']
 availableSecrets:
   secretManager:
   - versionName: projects/${PROJECT_ID}/secrets/DOCKERHUB/versions/latest
