@@ -17,7 +17,7 @@ RUN update-ca-trust
 RUN mkdir lc
 WORKDIR /lc
 
-RUN curl https://downloads.limacharlie.io/sensor/linux/64 -o lc_sensor
+RUN curl -L https://downloads.limacharlie.io/sensor/linux/64 -o lc_sensor
 RUN chmod 500 ./lc_sensor
 
 CMD ./lc_sensor -d -
