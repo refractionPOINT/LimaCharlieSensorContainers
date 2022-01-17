@@ -9,7 +9,7 @@ The foundational technology used by LimaCharlie is a cross platform EDR.
 
 ## What is this container used for?
 
-### Alpine Container
+### Container
 This container is designed to run the LimaCharlie EDR in a privileged
 container as part of Docker-based cluster environments like Kubernetes.
 
@@ -23,7 +23,7 @@ to create a passive network tap.
 
 ## Basic Usage
 
-### Alpine Container
+### Container
 This assumes you have an Organization created on LimaCharlie.io (free account and free tier available).
 
 On LimaCharlie.io create an Installation Key and copy it to your clipboard.
